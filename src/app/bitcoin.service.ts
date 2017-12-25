@@ -4,7 +4,7 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
 
 const apiKey ="CM6JRFJY7MOTX7P6";
 @Injectable()
-export class BitcoinService {
+export class BitCoinService {
 
   CNY:string = "hello";
   constructor(private http:HttpClient) { }
