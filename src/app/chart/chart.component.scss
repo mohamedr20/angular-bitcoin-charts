@@ -1,0 +1,14 @@
+.chart-container{
+    display:flex;
+    overflow:hidden;
+}
+
+canvas{
+    height:500px;
+}
+.spinner-div{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:20px;
+}

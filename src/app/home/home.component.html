@@ -1,0 +1,49 @@
+<!-- <h3>This is the home component</h3>
+<div class="container">
+  <div class="row center">
+    <div class="col-lg-12">
+        <div class="card">
+        <form [formGroup]="bitcoinForm" novalidate>
+                <input formControlName="name" type="text" name="" id="">
+                <select name="" id="">
+                        <option value="value1">Value 1</option> 
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+
+                    <input type="search" placehodler="Enter here" id="">
+                    <button class="btn-primary">
+                        <span>Search</span>
+                    </button>
+                   Value: {{heroForm.value | json}}
+                   Status: {{heroForm.status|json}}
+        </form>
+        </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="row center">
+    <div class="col-lg-12">
+        <form class="base-form" [formGroup]="bitcoinForm" (ngSubmit)="navigate()" novalidate>
+          <h3>Choose a market below</h3>
+          <label for="">
+             Market Place
+              <select class="form-control" formControlName="market_code" id="">
+                  <option *ngFor="let cash of crypto_currency_list" value="{{cash.currency_code}}">{{cash.currency_name}}</option>
+                </select>
+          </label>
+
+          <!-- <select classs="form-control" formControlName="currency_code" id="">
+              <option *ngFor="let cash of crypto_market_list" value="{{cash.currency_code}}">Market:{{cash.currency_name}}</option>
+            </select> -->
+            <span class="err-message">{{errMessage}}</span>
+            <button type="submit" (click)="navigate()" class="btn-primary">
+              <span>Search</span>
+          </button>
+        </form>
+    </div>
+  </div>
+</div>
+
+

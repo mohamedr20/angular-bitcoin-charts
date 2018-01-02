@@ -1,0 +1,25 @@
+p{
+    color:black;
+}
+.err-message{
+    color:lightcoral;
+    font-size:16px;
+    opacity:1;
+    animation-delay:1.5s;
+    animation-duration:10s;
+    font-family:'Open Sans',sans-serif;
+    animation-name: bottomFadeIn
+}
+
+@keyframes bottomFadeIn{
+    0%{
+        position: absolute;
+        bottom:-5rem;
+        opacity: 0;
+    }
+    75%{
+        position: absolute;
+        bottom:25%;
+        opacity: 1;
+    }
+}

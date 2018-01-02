@@ -1,50 +1,26 @@
-<div class="row">
-  <div class="col-md-6">
-    <div class="card">
-        <div  class="chart-container" style="display: block;">
-            <canvas  *ngIf="lineChartData" baseChart width="400" height="400"
-                        [datasets]="lineChartData"
-                        [labels]="lineChartLabels"
-                        [options]="lineChartOptions"
-                        [colors]="lineChartColors"
-                        [legend]="lineChartLegend"
-                        [chartType]="lineChartType"
-                        ></canvas>
-                        <canvas *ngIf="lineChartData" baseChart width="400" height="400"
-                        [datasets]="lineChartData"
-                        [labels]="lineChartLabels"
-                        [options]="lineChartOptions"
-                        [colors]="lineChartColors"
-                        [legend]="lineChartLegend"
-                        [chartType]="lineChartType"
-                        ></canvas>
-                        <canvas *ngIf="lineChartData" baseChart width="400" height="400"
-                        [datasets]="lineChartData"
-                        [labels]="lineChartLabels"
-                        [options]="lineChartOptions"
-                        [colors]="lineChartColors"
-                        [legend]="lineChartLegend"
-                        [chartType]="lineChartType"
-                        ></canvas>
+
+                <div *ngIf="loading" class="spinner-div">
+                        <span class="spinner spinner-large spinner-blue spinner-slow"></span>
+                </div>
+        <div class="cards">
+            <div class="card">
+                <h5>Daily Chart</h5>
+                <daily-chart></daily-chart>
+            </div>
+            <div class="card">
+            <h5>Weekly Chart</h5>
+            <weekly-chart></weekly-chart>
             </div>
             
-    </div>
-  </div>
+            <div class="card">
+                <h5>Monthly Chart</h5>
+                <monthly-chart></monthly-chart>
+            </div>
+        </div>
 
-  <daily-chart
-  [dailyData]=""
-  >
-  </daily-chart>
 
-  <div class="col-md-6" style="margin-bottom: 10px">
-    <table class="table table-responsive table-condensed">
-      <tr>
-        <th *ngFor="let label of lineChartLabels">{{label}}</th>
-      </tr>
-      <tr *ngFor="let d of lineChartData">
-        <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
-      </tr>
-    </table>
-    <button (click)="randomize()">CLICK</button>
-  </div>
-</div>
+        
+
+
+           
+ 

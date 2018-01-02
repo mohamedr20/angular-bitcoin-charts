@@ -1,3 +1,10 @@
-<p>
-  daily-chart works!
-</p>
+<div  class="chart-container">
+    <canvas  *ngIf="lineChartData" baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                ></canvas>
+    </div>

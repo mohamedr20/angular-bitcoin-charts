@@ -1,0 +1,13 @@
+
+$black:#484848;
+$white:#ffffff;
+
+/* Theme colors*/
+$color-map-red: (
+    1000:#FF5861,
+    2000:darken(#FF5861,10%),
+    3000:darken(#FF5861,20%)
+);
+
+$alert-success:lighten(green,10%);
+$alert-failure:lighten(red,10%);

@@ -1,0 +1,23 @@
+
+.btn{
+margin-left:20px;
+margin-right:20px;
+margin-bottom:10px;
+padding:10px 24px 10px 24px;
+font-weight:700;
+letter-spacing: 2px;
+line-height:20px;
+cursor: pointer;
+}
+
+.btn-primary{
+    @extend .btn;
+    color:$white;
+    background:map-get($color-map-red,1000);
+}
+
+.btn-dark{
+    @extend .btn;
+    background:map-get($color-map-red,3000)
+}
+
