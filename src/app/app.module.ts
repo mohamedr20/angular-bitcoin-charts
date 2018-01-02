@@ -15,13 +15,8 @@ import { SelectComponent } from './shared/select/select.component';
 
 const appRoutes:Routes = [
   {path:'',pathMatch:'full',component:HomeComponent,children:[
-    {path:'daily',component:DailyChartComponent},
-    {path:'weekly',component:WeeklyChartComponent},
-    {path:'monthly',component:MonthlyChartComponent}
   ]},
   {path:'chart',component:ChartComponent},
-  {path:'monthly',component:MonthlyChartComponent},
-  {path:'weekly',component:WeeklyChartComponent}
 ]
 
 

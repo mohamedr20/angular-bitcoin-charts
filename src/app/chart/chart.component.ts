@@ -17,4 +17,5 @@ interface DailyBitCoinData{
 })
 export class ChartComponent{
 
+
 }

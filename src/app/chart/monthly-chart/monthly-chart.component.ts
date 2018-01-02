@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input,OnInit, Output, EventEmitter} from '@angular/core';
 import {BitCoinService} from '../../bitcoin.service'
 import {Router,ActivatedRoute} from '@angular/router';
 
@@ -24,9 +24,7 @@ export class MonthlyChartComponent implements OnInit {
   public currency_name:string;
   public currency_code:string;
   public market_name:string;
-
   loading:boolean = true;
-  dataSet:any;
 
   ngOnInit(){
     this.route.queryParams
